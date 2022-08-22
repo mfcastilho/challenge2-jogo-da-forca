@@ -26,6 +26,12 @@
 <li>Caso acerte todas as letras antes de gastar todas tentativas, você venceu o jogo</li>
 </ul>
 <hr>
+<h2>Licenca</h2>
+<ul>
+<li><span>Esse projeto está sob a licença MIT. Veja o arquivo </span><a href="https://github.com/mfcastilho/challenge2-jogo-da-forca/blob/main/license">LICENSE</a><span> para mais detalhes.</span></li>
+</ul>
+
+
 <h2>Informações adicionais</h2>
 
  <ul>
