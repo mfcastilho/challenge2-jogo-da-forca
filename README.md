@@ -35,5 +35,5 @@
 <h2>Informações adicionais</h2>
 
  <ul>
-  <li>Deploy do projeto:<a href="https://mfcastilho.github.io/challenge2-jogo-da-forca/">clique aqui</a></li></ul> 
+  <li>Deploy do projeto:<a href="https://mfcastilho.github.io/challenge2-jogo-da-forca/"> clique aqui</a></li></ul> 
  
