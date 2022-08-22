@@ -6,7 +6,7 @@
 
 
 <div>
-  <h2>Feito com:</h2>
+  <h2>Feito com</h2>
   <ul>
     <li>html</li>
     <li>css</li>
