@@ -388,7 +388,6 @@ function adicionaNovaPalavra(){
     localStorage.setItem("minhaListaPalavras", JSON.stringify(listaPalavras));
 
     alert("Palavra adicionada com sucesso!");
-
     recomecaJogo();
   
   });
