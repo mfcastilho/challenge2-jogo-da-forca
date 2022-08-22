@@ -20,9 +20,9 @@
 
 <ul>
 <li>Uma palavra aleatória é gerada</li>
-<li>O objetivo é acertas todas as letras dessa palavra</li>
-<li>Não se pode repetir letras já inseridas</li>
-<li>Caso gaste todas as 6 tentativas, perdeu o jogo</li>
+<li>O objetivo é acertar todas as letras dessa palavra</li>
+<li>Não pode repetir letras já inseridas</li>
+<li>Caso gaste todas as 6 tentativas, você perdeu o jogo</li>
 <li>Caso acerte todas as letras antes de gastar todas tentativas, você venceu o jogo</li>
 </ul>
 <hr>
