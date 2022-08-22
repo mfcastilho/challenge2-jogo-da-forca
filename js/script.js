@@ -324,13 +324,13 @@ function checandoAcertosUsuario(){
 
 //Função Mensagem perdeu o jogo
 function perdeu(){
-  alert(`"Você PERDEU!\nA palavra correta era: ${palavraSecreta.toLocaleUpperCase()}`);
+  alert(`Você PERDEU!\nA palavra correta era: ${palavraSecreta.toLocaleUpperCase()}`);
   location.reload();
 }
 
 //Função Mensagem ganhou o jogo
 function ganhou(){
-  alert(`"Você ACERTOU! 🥳 Parabéns!`);
+  alert(`Você ACERTOU! 🥳 Parabéns!`);
   location.reload();
 }
 
