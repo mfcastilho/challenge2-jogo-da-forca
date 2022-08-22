@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Teste Jogo da Forca</title>
+</head>
+<body>
+  <header>
+    <h1>Jogo da Forca</h1>
+  </header>
+  <div id="container">
+    <main> 
+      <div id="container-jogo">
+        <img id="imagem-inicio" src="assets/forcaVector.png" alt="">  
+        <div id="container-desenho">
+          <canvas id="canvas" width="600" height="300"></canvas>  
+        </div>
+        <div id="container-palavra_secreta"></div>
+        <div id="container-letras_erradas"></div>
+        <div id="container-botoes_tabuleiro">
+          <button id="botao-novo_jogo" class="botoes-tabuleiro">Novo Jogo</button>
+          <button id="botao-voltar" class="botoes-tabuleiro">Voltar</button>
+        </div>
+      </div>
+      <div id="container-adicionar_palavra">
+        <input id="formulario-nova_palavra" type="text" placeholder="Digite a palavra." >
+        <div id="container-botoes_nova_palavra">
+          <button id="botao-salvar_palavra" class="botoes-nova_palavra">Salvar</button>
+          <button id="botao-desistir" class="botoes-nova_palavra">Desistir</button>
+        </div>
+      </div>
+      <div id="container-botoes_iniciais">
+        <button id="botao-iniciar_jogo" class="botoes-iniciais">Começar a jogar</button>
+        <button id="botao-adicionar_nova_palavra" class="botoes-iniciais">Adicionar nova palavra</button>
+      </div>  
+    </main>
+  </div>
+   
+  <footer>
+    <div id="container-social_network">
+      <a href="https://github.com/mfcastilho"><img class="social_networks-icons" src="assets/icons/github_icon.png" alt="github icon"></a>
+      <a href="https://www.linkedin.com/in/frederico-de-castilho/"><img class="social_networks-icons" src="assets/icons/linkedin_icon.png" alt="linkedin icon"></a>
+      <a href="https://www.instagram.com/mffredericofrederico/"><img class="social_networks-icons" src="assets/icons/instagram_icon.png" alt="github icon"></a>
+    </div>
+    
+    <h5>Developed by Mario Frederico de Castilho.</h5>
+  </footer>
+  <div class="aviso-palavra_repetida">
+    Você já usou essa letra!
+  </div>
+  <script src="js/script.js"></script>
+  <script src="js/canvas.js"></script>
+</body>
+</html>
