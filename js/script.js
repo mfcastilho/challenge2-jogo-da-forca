@@ -1,17 +1,11 @@
 
-var botaoDesistir = document.getElementById("botao-desistir");
-
 //botões Menu Iniciar
 var botaoIniciarJogo  = document.getElementById("botao-iniciar_jogo");
 var botaoAdicionarNovaPalavra = document.getElementById("botao-adicionar_nova_palavra");
 
-
 //botões do tabuleiro
 var botaoNovoJogo = document.getElementById("botao-novo_jogo");
 var botaoVoltar = document.getElementById("botao-voltar");
-
-
-
 
 //variável global que será comparada 
 //com o tamanho da palavra secreta
@@ -83,7 +77,6 @@ var listaPalavras = [
   'estudar'
 ];
 
-
 //variável global que irá armazenar a palavra secreta
 var palavraSecreta = "";
 
@@ -91,7 +84,6 @@ var palavraSecreta = "";
 
 
 //--------------------------------INÍCIO EVENTOS------------------------------------//
-
 
 
 
@@ -154,22 +146,23 @@ function escutarTeclado(evento){
     let letra = evento.key.toLocaleUpperCase();
     console.log(letra)
     if(letrasErradas.includes(letra)){
+      
+      /*chama a função para mostrar mensagem
+      avisando que a letra ja foi usada!*/
       avisoLetraRepetida();
-      //criar função para mostrar mensagem
-      //avisando que a letra ja foi usada!
-      console.log("Letra já foi digitada!")
+      console.log("Letra já foi digitada!");
       
     }else {
       if(palavraSecreta.includes(letra)){
-        letrasCorretas.push(letra);
-        console.log(letrasCorretas.length)
-        console.log("Tamanho palavra secreta:"+palavraSecreta.length);
-        
+
+        letrasCorretas.push(letra); 
+
       }else{
+
         letrasErradas.push(letra);
       }
     }
-    //criar função para atualizar 
+    //chamando a função para atualizar o jogo
     atualizaJogo();
   }
 }
@@ -209,7 +202,6 @@ function isLetra(codigo){
 function mostraTracos(){
 
   palavraSecreta = palavraSecreta.toLocaleUpperCase();
-  console.log(palavraSecreta);
 
   let containerPalavraSecreta = document.getElementById("container-palavra_secreta");
   containerPalavraSecreta.innerHTML = "";
@@ -232,15 +224,16 @@ function mostrarLetrasErradas(){
 
 //Função MOSTRA LETRAS CORRETAS no tabuleiro
 function mostrarLetrasCorretas(){
+
   let p = 0;
   let containerPalavraSecreta = document.getElementById("container-palavra_secreta");
   containerPalavraSecreta.innerHTML = "";
   palavraSecreta = palavraSecreta.toLocaleUpperCase();
-  //console.log(palavraSecreta)
+
   palavraSecreta.split("").forEach((letra) =>{
     if(letrasCorretas.includes(letra)){
+      
       p++;
-      console.log(p);
       containerPalavraSecreta.innerHTML += `<span>${letra} </span>`;
       
     }else{
@@ -263,8 +256,6 @@ function abreTabuleiro(){
   document.getElementById("container-desenho").style.marginBottom = "0px";
   document.getElementById("imagem-inicio").style.display = "none";
   desenhaForca();
-
-
 
 }
 
@@ -311,7 +302,6 @@ function checandoChancesUsuario(){
   }else if(letrasErradas.length == 6){
     chances = 0;
   }
-  console.log(chances);
   desenhar(chances);
 }
 
@@ -384,7 +374,6 @@ function adicionaNovaPalavra(){
   let botaoDesistir = document.getElementById("botao-desistir");
 
   
-  
   //Evento do BOTÃO SALVAR nova palavra na lista 
   botaoSalvarPalavra.addEventListener("click",function(){
     
@@ -411,6 +400,7 @@ function adicionaNovaPalavra(){
 
 }
 
+//Função que AVISA QUE A LETRA JÁ FOI DIGITADA
 function avisoLetraRepetida(){
   let aviso = document.querySelector(".aviso-palavra_repetida");
   aviso.classList.add("mostra");
@@ -419,6 +409,8 @@ function avisoLetraRepetida(){
   },2000);
 }
 
+
+//Função que MOSTRA NO CONSOLE A LISTA ATUAL DAS PALAVRAS
 function mostraListaPalavrasNoConsole(){
   
   if(localStorage.minhaListaPalavras){
@@ -428,7 +420,7 @@ function mostraListaPalavrasNoConsole(){
   listaPalavras.forEach((palavra) =>{
     console.log(palavra);
   });
-}mostraListaPalavrasNoConsole();
+}
 
 
 
